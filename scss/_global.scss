@@ -1,0 +1,142 @@
+@import 'vars';
+@import 'fonts';
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  @extend %roboto-400;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.intro-breadcrumbs {
+  display: block;
+  background: url("../images/bg-2.jpg") no-repeat;
+  background-size: cover;
+}
+
+.title {
+  @extend %roboto-500;
+  font-size: 42px;
+  line-height: 50px;
+  color: #ffffff;
+  margin-bottom: 45px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ca9546;
+    border-radius: 50%;
+
+    &--active {
+      background-color: #ca9546;
+    }
+
+    & + & {
+      margin-left: 8px;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 1px solid #ca9546;
+  border-radius: 50%;
+
+  &-active {
+    background-color: #ca9546;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.btn {
+  padding: 15px 30px 15px 30px;
+  border: 1px solid #ca9546;
+  color: #fff;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  @extend %roboto-500;
+  transition: 0.2s linear;
+
+  &:hover {
+    background-color: #ca9546;
+  }
+}
+
+.btn + .btn {
+  margin-left: 15px;
+}
+
+ul.breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: '>';
+  margin: 0 5px;
+}
+
+.breadcrumbs__link {
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  @extend %roboto-500;
+}
+
+.breadcrumbs__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs__link--active {
+  color:#ca9546;
+}
+
+.footer {
+  margin-top: auto;
+}
